@@ -30,6 +30,12 @@
               {{- .organization | markdownify | emojify -}}
               {{- with .organization_url}}</a>{{end -}}
 
+              <span class="middot-divider"></span>
+
+              {{ (time .date_start).Format ($page.Params.date_format | default "Jan 2006") }}
+
+            </div>
+
         {{- if $svg_icon}}
           </div>
         </div>
